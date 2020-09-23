@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 浮动元素不会将父元素撑开所以父元素需要设置高度 
+清除父元素浮动影响 overflow auto,clear left/right/both
+浮动元素不会覆盖文字内容
+浮动元素不会覆盖图片内容
+浮动元素不会覆盖表达不元素
+浮动元素排列时,只参考前一个元素位置即可
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        .a {
+            background-color: orange;
+        }
+        
+        .b {
+            background-color: yellow;
+        }
+        
+        .c {
+            background-color: blue;
+        }
+        
+        .a,
+        .b,
+        .c {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            float: left;
+            margin-left: 20px;
+            box-shadow: 0 0 5px grey;
+        }
+        
+        .a:hover,
+        .b:hover,
+        .c:hover {
+            box-shadow: 2px 2px 10px grey;
+        }
+        
+        .texthr {
+            width: 100px;
+            clear: left;
+            margin: 0 auto;
+        }
+        
+        .text1 {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+        
+        .text2 {
+            width: 200px;
+            height: 200px;
+            text-overflow: ellipsis;
+            background-color: blue;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text1"></div>
+    <div class="text2">水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水水</div>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="texthr">文字环绕</div>
+
+
+</body>
+
+</html>

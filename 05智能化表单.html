@@ -5,32 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        form {
+            width: 500px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 5px grey;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        
+        .step {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .form-line {
+            width: 100%;
+            border: 1px blue solid;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .form-line span {
+            display: inline-block;
+            width: 30%;
+            height: 30px;
+        }
+        
+        .form-line input {
+            width: 65%;
+            outline: none;
+            border: 0;
+            height: 30px;
+            background-color: rgba(1, 1, 1, 0.2);
+            border-radius: 5px;
+        }
+        
+        .form-line input[type=radio] {
+            height: 15px;
+            width: 15px;
+        }
+        
+        .form-line textarea {
+            height: 40px;
+            outline: none;
+        }
+        
+        #tj {
+            background-color: rgb(4, 78, 236);
+            width: 70px;
+            height: 30px;
+            margin: 0 auto;
+            border-radius: 10px;
+            outline: none;
+            padding: 5px 0;
+            display: block;
+            border: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <section>
-        <p>第一步:详细详细</p>
-        <p><span>姓名</span><input type="text"></p>
-        <p><span>电话</span><input type="phone"></p>
-        <p><span>facebook主页</span><input type="text"></p>
-    </section>
-    <section>
-        <p>第二步:收货地址</p>
-        <p><span>详细地址</span><textarea name="" id="" cols="30" rows="10"></textarea></p>
-        <p><span>邮编</span><input type="number"></p>
-    </section>
-    <section>
-        <p>第三步:银行卡信息</p>
-        <p>
-            <span>银行卡类型</span>
-            <input type="radio" name="yhk">借记卡
-            <input type="radio" name="yhk">信用卡
-            <input type="radio" name="yhk">储蓄卡</p>
-        <p><span>卡号</span><input type="text"></p>
-        <p><span>密码</span><input type="phone"></p>
-        <p><span>持卡人</span><input type="text"></p>
-    </section>
-    <button value="提交" type="submit">提交</button>
+    <form action="#">
+        <section>
+            <p class="step">第一步:详细详细</p>
+            <p class="form-line"><span>姓名</span><input type="text"></p>
+            <p class="form-line"><span>电话</span><input type="tel"></p>
+            <p class="form-line"><span>facebook主页</span><input type="text"></p>
+        </section>
+        <section>
+            <p class="step">第二步:收货地址</p>
+            <p class="form-line"><span>详细地址</span><textarea name="" id="" cols="30" rows="10"></textarea></p>
+            <p class="form-line"><span>邮编</span><input type="number"></p>
+        </section>
+        <section>
+            <p class="step">第三步:银行卡信息</p>
+            <p class="form-line">
+                <span>银行卡类型</span>
+                <input type="radio" name="yhk">借记卡
+                <input type="radio" name="yhk">信用卡
+                <input type="radio" name="yhk">储蓄卡</p>
+            <p class="form-line"><span>卡号</span><input type="text"></p>
+            <p class="form-line"><span>密码</span><input type="password"></p>
+            <p class="form-line"><span>持卡人</span><input type="text"></p>
+        </section>
+        <p><input type="submit" name="" id="tj" value="提交"></p>
+    </form>
 </body>
 
 </html>
