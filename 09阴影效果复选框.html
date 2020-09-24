@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 外观-webkit-appearance:none
+    伪元素xxx::after{content:"" ...}(例如下面的例子相当于在input中添加了一个子元素就像是<input><div></div></input>)
+    渐变背景background:linear-gradient(to bottom,#d3d3d3,#9e9e9e),(过度方向to top/to right/to bottom/to left,开始颜色,结束颜色)
+    阴影box-shadow 3px 0 5px 0 black inset 水平偏移,垂直偏移,模糊值,扩大范围,阴影颜色,阴影方向
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        input[type='checkbox'] {
+            -webkit-appearance: none;
+            margin: 50px;
+            border: 10px solid #c1c1c1;
+            border-radius: 50px;
+            width: 150px;
+            height: 70px;
+            background-color: #888;
+            box-shadow: 0 0 10px 1px #3f3f3f inset;
+            position: relative;
+            outline: none;
+            transition: 0.6s;
+        }
+        
+        input[type='checkbox']:checked {
+            background-color: #6fb500;
+        }
+        
+        input[type='checkbox']::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            border-radius: 30px;
+            background: linear-gradient(to bottom, #d3d3d3, #9e9e9e);
+            box-shadow: 0 2px 2px 0px #eee inset, 2px 1px 2px 0px;
+            transition: 0.6s;
+        }
+        
+        input[type='checkbox']:checked::after {
+            left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox">
+</body>
+
+</html>
